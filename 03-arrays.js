@@ -74,7 +74,7 @@ console.log(arregloFilter)*/
 // some verifica si almenos uno cumplen una condicion 
 
 
-var operadoresMapyFilter = arreglo2
+/*var operadoresMapyFilter = arreglo2
     .map(
         (item) => {
             return item * 2;
@@ -102,4 +102,15 @@ var operadoresMapyFilter = arreglo2
         ],
     }
 
-}
+}*/
+
+var arregloReduce = [ 2,1,11,3,45]
+
+var valorSumaArreglo = arregloReduce
+.reduce(
+    (acumulador, item, indice, arreglo) => {
+        return acumulador + item
+    }, 0 //es valor inicial del acumulador
+)
+
+console.log(valorSumaArreglo)
