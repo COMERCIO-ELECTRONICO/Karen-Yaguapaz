@@ -40,3 +40,64 @@ sumar();
 console.log(sumar(5, 5));
 console.log(sumar(5));
 console.log(sumar());
+
+
+//OTRA CLASE
+class Persona {
+    constructor(
+        protected nombre?: string,
+        public apellido?: string
+    ) {
+
+    }
+}
+
+const nnuevaPersona = new Persona()
+
+class hijo extends Persona {
+    constructor(
+        protected nombre: string,
+        public apellido: string,
+    ) {
+        super(nombre, apellido);
+        this.apellido = apellido;
+    }
+}
+
+const hijoPersona = new hijo('kevin', 'jimenez');
+console.log(hijoPersona);
+
+class Person {
+    constructor(
+        protected nombre?: string,
+        protected apellido?: string
+    ) { }
+}
+
+class alumno extends Person {
+    constructor(
+        protected nombre?: string,
+        protected apellido?: string
+    ) {
+        super(nombre, apellido);
+    }
+
+    set setNombre(nombre: string | any) {
+        this.nombre = nombre;
+    }
+    set setApellido(apellido: string | any) {
+        this.apellido = apellido;
+    }
+
+    get getNombre(): string | any {
+        return this.nombre
+    }
+    get getApellido(): string | any {
+        return this.nombre
+    }
+}
+
+const alumnoNuevo: alumno = new alumno();
+alumnoNuevo.setNombre('Karen');
+alumnoNuevo.setApellido('');
+alumnoNuevo.getApellido();
