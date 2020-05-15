@@ -15,11 +15,11 @@ export class AppComponent {
   datosHijo = {
     tituloPadre: 'soy tu padre hola',
     nombreBotonPadre: 'alertar!!',
-    imagenPadre: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Angular_full_color_logo.svg/1200px-Angular_full_color_logo.svg.png',
+    imagenPadre: 'https://es.wikipedia.org/wiki/Angular_(framework)#/media/Archivo:Angular_full_color_logo.svg',
   };
 
 
-  obtenerRespuestaHjo(evento) {
+  obtenerRespuestaHijo(evento) {
     console.log(evento)
   }
 }

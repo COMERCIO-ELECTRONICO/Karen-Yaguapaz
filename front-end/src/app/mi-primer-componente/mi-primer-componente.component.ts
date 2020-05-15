@@ -10,7 +10,7 @@ export class MiPrimerComponenteComponent implements OnInit, OnDestroy {
   @Input() titulo: string;
   @Input() nombreBoton: string;
   @Input() imagenPath: string;
-  @Input() datos: Object;
+  @Input() datos: any;
 
   @Output() saludoHijo = new EventEmitter();
 

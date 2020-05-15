@@ -15,7 +15,7 @@ export class HijoComponent implements OnInit {
   }
 
   alertaValorPadre(){
-    (this.valorDelPadre)
+    alert(this.valorDelPadre)
   }
 
 }

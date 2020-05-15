@@ -21,12 +21,9 @@
   
 </app-padre>
 
-<app-mi-primer-componente
-  [titulo]="tituloPadre"
-  [nombreBoton]="nombreBotonPadre"
-  [imagenPath]="imagenPadre"
-  [datos]="datosHijo"
-  
-  (saludoHijo)="obtenerRespuestaHjo($event)"
->
-</app-mi-primer-componente>
+<app-mi-primer-componente 
+[titulo]="tituloPadre" 
+[nombreBoton]="nombreBotonPadre"
+[imagenPath]="imagenPadre"
+[datos]="datosHijo" (saludoHijo)="obtenerRespuestaHijo($event)">
+</app-mi-primer-componente> 
