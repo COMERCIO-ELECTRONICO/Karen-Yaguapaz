@@ -2,8 +2,22 @@
     Karen Paola
     {{datos.tituloPadre}}
 </h1>
+
+<h1>Pipes</h1>
+
+<p>objeto (JSON)</p>
+    {{datos | json}}
+
+<p>Fecha</p>
+{{fecha | date: 'yy MM dd'}}
+
+<p>Currency</p>
+{{sueldo | currency}}
+{{nombre | uppercase}}
+
 <button (click)="SALUDAR()">
     {{datos.nombreBotonPadre}}
 </button>
 
 <img [src]="datos.imagenPadre" alt="">
+
