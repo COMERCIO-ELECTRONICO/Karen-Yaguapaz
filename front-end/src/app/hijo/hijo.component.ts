@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-hijo',
@@ -9,8 +9,12 @@ export class HijoComponent implements OnInit {
 
   constructor() { }
   @Input() valorDelPadre:string;
-  @Input() edadPadre:string;
+  @Input() nombreBotonDeber:string;
+  @Input() edadPadre:number;
+  @Output() calcular= new EventEmitter
+  edad:number;
 
+  nombreBoton='';
   
   ngOnInit(): void {
   }
@@ -20,7 +24,9 @@ export class HijoComponent implements OnInit {
   }
 
   calcularEdad(){
-    
+    this.edad=2020-this.edadPadre
+     this.calcular.emit(this.edad)
   }
+ 
 
 }

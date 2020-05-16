@@ -10,7 +10,19 @@ export class PadreComponent implements OnInit {
   constructor() { }
 
   valorDelInput= '';
+  valorDelInputEdad= '';
+  nombreBoton:string;
+  
+  edad:number;
+  yyyy: number;
+
+
   ngOnInit(): void {
+  }
+  
+  RespuestaHijo(evento){
+    this.edad=evento
+    console.log(evento)
   }
 
 }
