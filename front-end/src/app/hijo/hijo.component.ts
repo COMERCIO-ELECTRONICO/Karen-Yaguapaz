@@ -9,6 +9,7 @@ export class HijoComponent implements OnInit {
 
   constructor() { }
   @Input() valorDelPadre:string;
+  @Input() edadPadre:string;
 
   
   ngOnInit(): void {
@@ -16,6 +17,10 @@ export class HijoComponent implements OnInit {
 
   alertaValorPadre(){
     alert(this.valorDelPadre)
+  }
+
+  calcularEdad(){
+    
   }
 
 }
