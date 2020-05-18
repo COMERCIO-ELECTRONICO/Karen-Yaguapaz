@@ -8,14 +8,14 @@
 
 <br>
 <label>EDAD</label> <br>
-<input type="number" [(ngModel)]='yyyy'>
+<input type="number" [(ngModel)]='aann'>
 
 <p>La edad es: </p>{{edad}}
 <!--FIN TAREA-->
 <app-hijo
     [valorDelPadre]="valorDelInput"
     [nombreBotonDeber]="nombreBoton"
-    [edadPadre]="yyyy" 
+    [edadPadre]="aann" 
     (calcular)="RespuestaHijo($event)"
 >
 

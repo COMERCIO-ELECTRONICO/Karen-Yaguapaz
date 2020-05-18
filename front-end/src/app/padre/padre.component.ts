@@ -14,7 +14,7 @@ export class PadreComponent implements OnInit {
   nombreBoton:string;
   
   edad:number;
-  yyyy: number;
+  aann: number;
 
 
   ngOnInit(): void {
