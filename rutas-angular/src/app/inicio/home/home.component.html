@@ -10,3 +10,15 @@ ir a login
 <button (click)="irAUsuarioListar()">
     ir a usuario con click
 </button>
+<h1>Tarea</h1>
+<h3>Modulo Pokemon</h3>
+<p>componentes: crear, editar, listar</p>
+<button [routerLink]="['/pokemon','listarpokemon']">
+    Listar Pokemon
+</button>
+<button (click)="editarPokemon()">
+    Editar Pokemon
+</button>
+<button (click)="crearPokemon()">
+    Crear Pokemon
+</button>
