@@ -11,6 +11,14 @@ export class LoginComponent implements OnInit {
   email='';
   contrasena = '';
 
+  nombre='';
+  apellido='';
+  usuario='';
+  emailt='';
+  password='';
+  passwordCon='';
+
+
   ngOnInit(): void {
   }
 
@@ -21,6 +29,24 @@ export class LoginComponent implements OnInit {
         formulario.controls.email.value +
         'password: ' +
         formulario.controls.contrasena.value
+    );
+  }
+
+  obtenerFormularioTarea(formulario){
+    console.log(formulario);
+    alert(
+      'nombre:' +
+        formulario.controls.nombre.value +
+      'apellido'+
+        formulario.controls.apellido.value +
+      'usuario' +
+      formulario.controls.usuario.value +
+      'correo: ' +
+        formulario.controls.emailt.value +
+        'password: ' +
+        formulario.controls.password.value +
+      'passwordCon' +
+      formulario.controls.passwordCon.value
     );
   }
 }
