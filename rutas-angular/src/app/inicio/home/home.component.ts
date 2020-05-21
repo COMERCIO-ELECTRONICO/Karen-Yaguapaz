@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -8,11 +8,28 @@ import { Router } from '@angular/router';
 })
 export class HomeComponent implements OnInit {
 
+  id:number;
+
   constructor(
-    private readonly _router: Router
+    private readonly _router: Router,
+    private readonly _activatedRouted: ActivatedRoute
   ) { }
 
   ngOnInit(): void {
+    //los obserbables son asincronos
+    this._activatedRouted
+    .params
+    .subscribe(
+      (resultado)=>{
+        console.log('Resultado Observable')
+        console.log(resultado);
+        this.id=resultado.id;
+        console.log('calor de id', this.id)
+      },
+      (error) => {
+        console.log(error)
+      }
+    );
   }
 
   irAUsuarioListar(){

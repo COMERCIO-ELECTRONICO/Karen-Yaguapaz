@@ -10,6 +10,10 @@ const rutas: Routes =[
         component: HomeComponent
     },
     {
+        path: ':id/inicio',
+        component: HomeComponent
+    },
+    {
         path: 'login',
         component: LoginComponent
     },
