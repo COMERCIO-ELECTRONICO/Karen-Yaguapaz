@@ -1,0 +1,162 @@
+<p>login works!</p>
+<div class="container">
+    <!--Variables html se utiliza el #-->
+    <h1>Variables HTML #</h1>
+    <form (ngSubmit)="obtenerFormulario(formularioUsario)" #formularioUsario="ngForm">
+
+        <h4>Estado formulario</h4>
+        <h5>
+            <pre>
+            valid: {{formularioUsario.valid}}
+            invalid: {{formularioUsario.invalid}}
+            dirty: {{formularioUsario.dirty}}
+            touched: {{formularioUsario.touched}}
+            untouched: {{formularioUsario.untouched}}
+          </pre>
+        </h5>
+
+
+        <div class="form-group">
+            <label for="exampleInputEmail1">Email address</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                [(ngModel)]="email" name="email" placeholder="ejemplo" minlength="3" required
+                pattern="[^@]+@[^@]+\.[a-zA-Z]{2,6}" #campoEmail="ngModel">
+            <h4>
+                Estados del campo email
+            </h4>
+            <pre>
+            valid: {{campoEmail.valid}}
+            invalid: {{campoEmail.invalid}}
+            dirty: {{campoEmail.dirty}}
+            touched: {{campoEmail.touched}}
+            untouched: {{campoEmail.untouched}}
+          </pre>
+
+            {{campoEmail.errors | json}}
+
+            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+        </div>
+        <div class="alert alert-danger" role="alert" *ngIf="(campoEmail.errors)
+        && campoEmail.dirty === true">
+            <p *ngIf="campoEmail.errors.required">
+                Campo email requerido
+            </p>
+
+            <p *ngIf="campoEmail.errors.minlength">
+                minimo 3
+            </p>
+
+            <p *ngIf="campoEmail.errors.pattern">
+                No es email
+            </p>
+        </div>
+
+
+        <div class="form-group">
+            <label for="exampleInputEmail1">Email address</label>
+            <input type="password" class="form-control" id="exampleInput" aria-describedby="emai"
+                [(ngModel)]="contrasena" name="contrasena" placeholder="****" minlength="4" required
+                #campoContrasena="ngModel">
+        </div>
+
+
+        <button [disabled]="formularioUsario.invalid" type="submit" class="btn btn-primary">
+            Submit
+        </button>
+    </form>
+
+    <!-- ---------- FORMULARIO TAREA -------- -->
+
+    <h1>Formulario de Tarea</h1>
+    <form (ngSubmit)="obtenerFormularioTarea(formularioTarea)" #formularioTarea="ngForm">
+        <h4>Estado formulario</h4>
+        <div class="form-row">
+            <div class="col-md-6 mb-3">
+                <label for="validationDefault01">Nombre</label>
+                <input type="text" class="form-control" [(ngModel)]="nombre" name="nombre" placeholder="Karen" required
+                    minlength="3" #Nombre="ngModel">
+            </div>
+            <div class="col-md-6 mb-3">
+                <label for="validationDefault02">Apellido</label>
+                <input type="text" class="form-control" [(ngModel)]="apellido" name="apellido" placeholder="Yaguapaz" required
+                minlength="3" #Apellido="ngModel">
+            </div>
+
+        </div>
+        <div class="form-row">
+            <div class="col-md-6 mb-3">
+                <div class="alert alert-danger" role="alert" *ngIf="(Nombre.errors) && Nombre.dirty === true">
+                    <p *ngIf="Nombre.errors.required"> Nombre Requerido </p>
+                    <p *ngIf="Nombre.errors.minlength"> Nombre minimo 3 </p>
+                </div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <div class="alert alert-danger" role="alert" *ngIf="(Apellido.errors) && Apellido.dirty === true">
+                    <p *ngIf="Apellido.errors.required"> Apellido Requerido </p>
+                    <p *ngIf="Apellido.errors.minlength"> Apellido minimo 3 </p>
+                </div>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="col-md-6 mb-3">
+                <label for="validationDefault01">Usuario</label>
+                <input type="text" class="form-control" [(ngModel)]="usuario" name="usuario" placeholder="Karen Yzs" required
+                minlength="3" #Usuario="ngModel">
+            </div>
+            <div class="col-md-6 mb-3">
+                <label for="validationDefault02">Email</label>
+                <input type="text" class="form-control" placeholder="karen@email.com" required
+                [(ngModel)]="emailt" name="emailt" minlength="3" 
+                pattern="[^@]+@[^@]+\.[a-zA-Z]{2,6}" #Emailt="ngModel">
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="col-md-6 mb-3">
+                <div class="alert alert-danger" role="alert" *ngIf="(Usuario.errors) && Usuario.dirty === true">
+                    <p *ngIf="Usuario.errors.required"> Usuario Requerido </p>
+                    <p *ngIf="Usuario.errors.minlength"> Usuario minimo 3 </p>
+                </div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <div class="alert alert-danger" role="alert" *ngIf="(Emailt.errors) && Emailt.dirty === true">
+            <p *ngIf="Emailt.errors.required"> Correo requerido </p>
+            <p *ngIf="Emailt.errors.minlength"> Correo minimo 3 </p>
+            <p *ngIf="Emailt.errors.pattern"> No es email </p>
+        </div>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="col-md-6 mb-3">
+                <label for="validationDefault01">Contraseña</label>
+                <input type="password" class="form-control" [(ngModel)]="password" name="password" placeholder="*******" required
+                minlength="5" #Password="ngModel">
+            </div>
+            <div class="col-md-6 mb-3">
+                <label for="validationDefault02">Verificar Contraseña</label>
+                <input type="password" class="form-control" [(ngModel)]="passwordCon" name="passwordCon" placeholder="******" required
+                minlength="5" #PasswordCon="ngModel">
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="col-md-6 mb-3">
+                <div class="alert alert-danger" role="alert" *ngIf="(Password.errors) && Password.dirty === true">
+                    <p *ngIf="Password.errors.required"> Password Requerido </p>
+                    <p *ngIf="Password.errors.minlength"> Password minimo 5 </p>
+                </div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <div class="alert alert-danger" role="alert" *ngIf="(PasswordCon.errors) && PasswordCon.dirty === true">
+                    <p *ngIf="PasswordCon.errors.required"> PasswordCon Requerido </p>
+                    <p *ngIf="PasswordCon.errors.minlength"> PasswordCon minimo 5 </p>
+                    <p *ngIf="PasswordCon.errors"> Contraseñas no Coinciden</p>
+                </div>
+                <div class="alert alert-danger" role="alert" *ngIf="(PasswordCon.dirty === true) && Password.value !== PasswordCon.value">
+                    <p> No coinciden passwords </p>
+                </div>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary">
+            Enviar
+        </button>
+    </form>
+</div>

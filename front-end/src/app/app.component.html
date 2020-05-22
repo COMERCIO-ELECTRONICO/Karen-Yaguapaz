@@ -1,0 +1,29 @@
+<router-outlet></router-outlet>
+
+<h1>Titulo</h1>
+<img src="https://miro.medium.com/max/3000/1*-f6StBRZQiuOAz7fdqWFKw.png" alt="" width="400px" height="400px">
+<p>Listas No Ordenadas -> etiqueta ul</p>
+<ul>
+  <li>Opción</li>
+  <li>Opción</li>
+  <li>Opción</li>
+  <li>Opción</li>
+</ul>
+<p>Listas  Ordenadas -> etiqueta ol</p>
+<ol>
+  <li>Opción</li>
+  <li>Opción</li>
+  <li>Opción</li>
+  <li>Opción</li>
+</ol>
+
+<app-padre>
+  
+</app-padre>
+
+<app-mi-primer-componente 
+[titulo]="tituloPadre" 
+[nombreBoton]="nombreBotonPadre"
+[imagenPath]="imagenPadre"
+[datos]="datosHijo" (saludoHijo)="obtenerRespuestaHijo($event)">
+</app-mi-primer-componente> 
