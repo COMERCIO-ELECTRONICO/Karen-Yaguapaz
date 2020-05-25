@@ -1,3 +1,4 @@
+import { FormsModule } from '@angular/forms';
 import { AppRoutes } from './app.routes';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -10,6 +11,9 @@ import { IniciarSesionComponent } from './iniciar-sesion/iniciar-sesion.componen
 import { LoginComponent } from './login/login.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {ButtonModule} from 'primeng/button';
+import {MatInputModule} from '@angular/material/input';
+import {AutoCompleteModule} from 'primeng/autocomplete';
+import { PerfilUsuarioComponent } from './perfil-usuario/perfil-usuario.component';
 
 @NgModule({
   declarations: [
@@ -17,14 +21,18 @@ import {ButtonModule} from 'primeng/button';
     HomeComponent,
     NoEncontradoComponent,
     IniciarSesionComponent,
-    LoginComponent
+    LoginComponent,
+    PerfilUsuarioComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     AppRoutes,
     BrowserAnimationsModule,
-    ButtonModule
+    ButtonModule,
+    FormsModule,
+    MatInputModule,
+    AutoCompleteModule
   ],
   providers: [],
   bootstrap: [AppComponent]
