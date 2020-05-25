@@ -58,6 +58,13 @@ export class LoginComponent implements OnInit {
           '/estudiante','perfil'
         ])
       }
+    }if(this.password === '1234'){
+      if (this.seleccionadoValor === 'paola') {
+        alert('es profesor');
+        this._router.navigate([
+          '/profesor','perfil'
+        ])
+      }
     }else{
       alert('no ingreso')
     }
