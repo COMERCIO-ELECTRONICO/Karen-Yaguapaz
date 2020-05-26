@@ -1,0 +1,66 @@
+<p>info-user works!</p>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-6">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <form class="example-form">
+                <mat-form-field class="example-full-width">
+                    <mat-label>Primer Nombre</mat-label>
+                    <input matInput placeholder="Karen" required
+                    [(ngModel)]="nombre1"
+                    name="nombre1">
+                </mat-form-field>
+                <mat-form-field class="example-full-width">
+                    <mat-label>Segundo Nombre</mat-label>
+                    <input matInput placeholder="Paola" required
+                    [(ngModel)]="nombre2"
+                    name="nombre2">
+                </mat-form-field>
+                <mat-form-field class="example-full-width">
+                    <mat-label>Primer Apellido</mat-label>
+                    <input matInput placeholder="Yaguapaz" required
+                    [(ngModel)]="apellido1"
+                    name="apellido1">
+                </mat-form-field>
+                <mat-form-field class="example-full-width">
+                    <mat-label>Segundo Apellido</mat-label>
+                    <input matInput placeholder="Solano" required
+                    [(ngModel)]="apellido2"
+                    name="apellido2">
+                </mat-form-field>             
+                <mat-form-field class="example-full-width">
+                    <mat-label>Correo</mat-label>
+                    <input matInput placeholder="mail@ejemplo.com" required
+                    [(ngModel)]="email"
+                    name="email">
+                </mat-form-field>
+                <mat-form-field class="example-full-width">
+                    <mat-label>Telefono</mat-label>
+                    <input matInput placeholder="0987654321" required
+                    [(ngModel)]="telefono"
+                    name="telefono">
+                </mat-form-field>
+                <mat-form-field class="example-full-width">
+                    <mat-label>Contraseña</mat-label>
+                    <input type="password" matInput required placeholder="**********"
+                    [(ngModel)]="password"
+                    name="password">
+                </mat-form-field>
+                <mat-form-field class="example-full-width">
+                    <mat-label>Contraseña</mat-label>
+                    <input type="password" matInput required placeholder="**********"
+                    [(ngModel)]="passwordConfirm"
+                    name="passwordConfirm">
+                </mat-form-field>
+            </form>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <button type="button" class="btn btn-outline-success btn-block" [disabled]="passwordConfirm===''" (click)="crearOEditar()">Crear/Editar</button>
+        </div>
+    </div>
+</div>

@@ -1,3 +1,4 @@
+import { UsuarioModule } from './usuario/usuario.module';
 import { FormsModule } from '@angular/forms';
 import { AppRoutes } from './app.routes';
 import { BrowserModule } from '@angular/platform-browser';
@@ -32,7 +33,8 @@ import { PerfilUsuarioComponent } from './perfil-usuario/perfil-usuario.componen
     ButtonModule,
     FormsModule,
     MatInputModule,
-    AutoCompleteModule
+    AutoCompleteModule,
+    UsuarioModule
   ],
   providers: [],
   bootstrap: [AppComponent]
