@@ -20,6 +20,12 @@ module.exports = {
     },
     esCasado: {
       type: 'boolean'
+    },
+
+    //RELACION ONE TO MANY
+    mascotas:{
+      collection: 'mascota',
+      via: 'idUsuario'
     }
 
     //  ╔═╗╦═╗╦╔╦╗╦╔╦╗╦╦  ╦╔═╗╔═╗

@@ -13,7 +13,13 @@ module.exports = {
     },
     edad:{
       type:'number'
+    },
+    
+    //RELACION MANY TO ONE
+    idUsuario:{
+      model: 'usuario'
     }
+
 
     //  ╔═╗╦═╗╦╔╦╗╦╔╦╗╦╦  ╦╔═╗╔═╗
     //  ╠═╝╠╦╝║║║║║ ║ ║╚╗╔╝║╣ ╚═╗
