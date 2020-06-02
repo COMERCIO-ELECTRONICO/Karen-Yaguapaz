@@ -76,8 +76,10 @@ export class LoginComponent implements OnInit {
   }
 
   ingresar(){
-
-    this._loginService
+    console.log('guardar')
+    
+    localStorage.setItem('nombre',JSON.stringify({nombre: 'karen'}) )
+    /*this._loginService
     .metodoPost(
       'http://localhost:1337/usuario',
     {
@@ -109,7 +111,7 @@ export class LoginComponent implements OnInit {
       }
     }else{
       alert('no ingreso')
-    }
+    }*/
   }
 
   eliminarRegistroPorID(){

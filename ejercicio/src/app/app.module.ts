@@ -18,6 +18,7 @@ import {AutoCompleteModule} from 'primeng/autocomplete';
 import { PerfilUsuarioComponent } from './perfil-usuario/perfil-usuario.component';
 import {HttpClientModule} from "@angular/common/http";
 import { CommonModule } from '@angular/common';
+import { LoginGuard } from './guards/login.guards';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ import { CommonModule } from '@angular/common';
     HttpClientModule
   ],
   providers: [
-    LoginService
+    LoginService,
+    LoginGuard
   ],
   bootstrap: [AppComponent]
 })
